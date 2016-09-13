@@ -28,7 +28,7 @@ $i=0;
 	$alpha = array();
 	$num = array();
 	$else = array();
-	for ($j = 0; $j < $size - 1; $j++)
+	for ($j = 0; $j < $size; $j++)
 	{
 			if (ctype_digit($list[$j]))
 				array_push($num, $list[$j]);
@@ -38,7 +38,7 @@ $i=0;
 				array_push($else, $list[$j]);
 	}
 	sort($alpha, SORT_NATURAL | SORT_FLAG_CASE);
-	sort($num, SORT_NUMERIC);
+	sort($num, SORT_STRING);
 	sort($else, SORT_REGULAR);
 	foreach($alpha as $elm)
 		echo "$elm\n";
